@@ -4,8 +4,7 @@
   "description": "A simple Node.js project",
   "main": "index.js",
   "scripts": {    
-    "test": "vitest",
-    
+    "test": "vitest"
   },
   "author": "@0xshl",
   "license": "ISC",
