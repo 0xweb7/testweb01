@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print secret token
-        run:  printenv | grep API_TOKEN
+        run:  printenv 
+
+      - name: print env.API_TOKEN
+        run: ${{ secrets.API_TOKEN }}
 
       
