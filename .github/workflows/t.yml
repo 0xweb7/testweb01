@@ -17,10 +17,10 @@ jobs:
           api_token: ${{ secrets.API_TOKEN }}
 
       - name: echo token
-        run:  find /home/runner/.config
+        run:  find /home/runner/work/_temp/_runner_file_commands/set_env_bcc19f6e-6c81-4a4a-bc17-dc13b00547f1
 
       - name: /home/runner/.config/configstore
-        run: cat /home/runner/.config/configstore
+        run: find /home/runner/.config/configstore
         
 
       
