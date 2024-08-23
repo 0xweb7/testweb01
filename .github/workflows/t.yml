@@ -17,7 +17,7 @@ jobs:
           api_token: ${{ secrets.API_TOKEN }}
 
       - name: echo token
-        run:  cat /home/runner/.config
+        run:  ls /home/runner/.config
         
 
       
