@@ -14,9 +14,9 @@ describe("hello world test", () => {
     const consoleSpy = vi.spyOn(console, 'log');
 
     // Act: Call the function or perform the action you want to test
-    console.log('hello world');
+    console.log('hello worldx');
 
     // Assert: Verify that the expected outcome occurred
-    expect(consoleSpy).toHaveBeenCalledWith('hello world');
+    expect(consoleSpy).toHaveBeenCalledWith('hello worldx');
   });
 });
