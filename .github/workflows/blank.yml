@@ -28,4 +28,18 @@ jobs:
       - name: print secret token
         run:  printenv 
 
-      
+      - name: git config
+        run: |
+               echo 'git config'
+               git config --local user.email "web20502050@gmail.com"
+               git config --global user.name "0xshl"
+               
+               date > test.txt
+               git add test.txt
+               git commit -m "using test yml"
+             
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                branch: ${{ github.ref }}
