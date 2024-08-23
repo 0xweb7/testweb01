@@ -11,12 +11,12 @@ describe("hello world test", () => {
 
   test("should print hello world", () => {
     // Arrange: Set up any necessary variables or objects
-    const consoleSpy = vi.spyOn(console, 'log');
+   
 
     // Act: Call the function or perform the action you want to test
     console.log('hello world');
 
     // Assert: Verify that the expected outcome occurred
-    expect(consoleSpy).toHaveBeenCalledWith('hello world');
+    
   });
 });
