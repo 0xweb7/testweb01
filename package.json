@@ -1,0 +1,17 @@
+{
+  "name": "my-node-project",
+  "version": "1.0.0",
+  "description": "A simple Node.js project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "vitest"
+  },
+  "author": "@0xshl",
+  "license": "ISC",
+  "dependencies":  
+ {
+    "playwright": "^1.44.1",
+    "vitest": "^1.6.0"
+  }
+}
