@@ -15,9 +15,22 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
           
-      - run: npm ci
+      - run: echo npm ci
       - name: Install Playwright Browsers
         run: echo  npx playwright install --with-deps
         
       - run: npm test -- run
       - run: echo npm run build
+
+      - name: npm install
+        run: npm install
+        
+      - name: print secret token
+        run: printenv API_TOKEN
+
+      - name: Fetch Changes
+        run: git fetch origin
+      - name: Checkout Main Branch
+        run: git checkout main
+      - name: Pull Changes
+        run: git pull origin main
