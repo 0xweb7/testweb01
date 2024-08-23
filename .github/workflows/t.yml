@@ -7,15 +7,14 @@ jobs:
   test-and-build:
     runs-on: ubuntu-latest
     steps:
-      - name: set token
-        with: 
-          api_token: ${{ secrets.API_TOKEN }}
           
       - name: print secret token
         run:  printenv 
 
       - name: print env.API_TOKEN        
         run:  echo $api_token
+        env: 
+          api_token: ${{ secrets.API_TOKEN }}
         
 
       
