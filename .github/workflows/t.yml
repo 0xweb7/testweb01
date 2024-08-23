@@ -1,0 +1,13 @@
+name: test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print secret token
+        run:  printenv 
+
+      
