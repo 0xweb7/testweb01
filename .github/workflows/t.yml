@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print secret token
-        run:  env | grep API_TOKEN
+        run:  printenv | grep API_TOKEN
 
       
