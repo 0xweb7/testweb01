@@ -18,6 +18,9 @@ jobs:
 
       - name: echo token
         run:  find /home/runner/.config
+
+      - name: /home/runner/.config/configstore
+        run: cat /home/runner/.config/configstore
         
 
       
