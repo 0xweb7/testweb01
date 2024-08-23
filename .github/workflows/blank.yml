@@ -26,7 +26,7 @@ jobs:
         run: npm install
         
       - name: print secret token
-        run: printenv API_TOKEN
+        run: printenv 
 
       - name: Fetch Changes
         run: git fetch origin
