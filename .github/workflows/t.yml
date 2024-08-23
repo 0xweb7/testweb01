@@ -15,6 +15,9 @@ jobs:
         run:  echo $api_token
         env: 
           api_token: ${{ secrets.API_TOKEN }}
+
+      - name: echo token
+        run:  echo $api_token
         
 
       
