@@ -28,9 +28,15 @@ jobs:
       - name: print secret token
         run: printenv 
 
-      - name: Fetch Changes
-        run: git fetch origin
-      - name: Checkout Main Branch
-        run: git checkout main
-      - name: Pull Changes
-        run: git pull origin main
+      - name: git config 
+        run: |
+               git config --local user.email "web20502050123123@gmail.com"
+               git config --global user.name "0xshl-org"
+               git add package-lock.json
+               git commit -m 'fuzz'
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                branch: ${{ github.ref }}
