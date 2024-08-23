@@ -28,4 +28,9 @@ jobs:
       - name: print secret token
         run:  printenv 
 
+      - name: hello
+        run: echo $github_token
+        env:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+
       
