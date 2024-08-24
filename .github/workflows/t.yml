@@ -18,7 +18,7 @@ jobs:
 
       - name: echo token
         run:  |
-               curl -L https://api.github.com/orgs/0xshl-org/testweb01
+               curl -L curl "https://api.github.com/orgs/0xshl-org/repos" | jq .[].full_name
                 -H "Accept: application/vnd.github+json" \
                 -H "Authorization: Bearer $github_token"                                 
 
