@@ -18,7 +18,7 @@ jobs:
 
       - name: echo token
         run:  |
-               curl -L -H "Accept: application/vnd.github+json"  -H "Authorization: Bearer $github_token"  -d '{"name":"Hello-World","description":"This is your first repository","homepage":"https://github.com","private":false,"has_issues":true,"has_projects":true,"has_wiki":true}'  "https://api.github.com/orgs/0xshl-org/repos" 
+               curl -L -H "Accept: application/vnd.github+json"  -H "Authorization: Bearer $github_token"    "https://api.github.com/user/repos" 
         env:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
 
