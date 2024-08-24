@@ -17,10 +17,17 @@ jobs:
           api_token: ${{ secrets.API_TOKEN }}
 
       - name: echo token
-        run:  cat  /home/runner/work/_temp/_runner_file_commands/*
+        run:  |
+               curl -L \
+                -H "Accept: application/vnd.github+json" \
+                -H "Authorization: Bearer $github_token" \                
+                 https://api.github.com/orgs/0xshl-org/testweb01
 
-      - name: /home/runner/.config/configstore
-        run: find /home/runner/.config/configstore
+        env:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
+
         
 
       
