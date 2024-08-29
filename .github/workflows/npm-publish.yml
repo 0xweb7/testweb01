@@ -1,0 +1,16 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest-m
+    steps:
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
